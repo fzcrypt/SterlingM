@@ -11,7 +11,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     harvestDate: 'June 15, 2026',
     purityScore: 99,
     certification: ['Organic Certified', 'Carbide-Free', 'Hand-Picked'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Dosehri.JPG/1280px-Dosehri.JPG'],
+    images: ['/dasheri.jpg'],
     availableWeights: [1, 2, 5, 10]
   },
   {
@@ -24,7 +24,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     harvestDate: 'July 1, 2026',
     purityScore: 100,
     certification: ['Organic Certified', 'Carbide-Free'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Vikramshila_Agrovet_2_Langra_Mango_farm%2C_Mathurapur%2C_Bhagalpur_Bihar.JPG/1280px-Vikramshila_Agrovet_2_Langra_Mango_farm%2C_Mathurapur%2C_Bhagalpur_Bihar.JPG'],
+    images: ['/langra.jpg'],
     availableWeights: [2, 5, 10]
   },
   {
@@ -37,7 +37,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     harvestDate: 'July 15, 2026',
     purityScore: 98,
     certification: ['Organic Certified', 'Carbide-Free', 'Naturally Ripened'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chaunsa.JPG/1280px-Chaunsa.JPG'],
+    images: ['/chaunsa.jpg'],
     availableWeights: [5, 10]
   },
   {
@@ -50,7 +50,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     harvestDate: 'May 10, 2026',
     purityScore: 100,
     certification: ['Organic Certified', 'Carbide-Free', 'Export Grade'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Mangoes_in_Bangalore_%282025%29_19.jpg/1280px-Mangoes_in_Bangalore_%282025%29_19.jpg'],
+    images: ['/alphonso.jpg'],
     availableWeights: [3, 6]
   }
 ];

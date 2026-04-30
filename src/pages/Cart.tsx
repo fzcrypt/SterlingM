@@ -35,7 +35,29 @@ export default function Cart() {
   };
 
   const handleFinalCheckout = () => {
-    // In a real app, this would integrate with Razorpay/Stripe, etc.
+    // Generate WhatsApp Message
+    let message = `*New Order - Sterling Mangoes*\n\n`;
+    message += `*Customer Details:*\n`;
+    message += `Name: ${address.name}\n`;
+    message += `Phone: ${address.phone}\n`;
+    message += `Address: ${address.street}, ${address.city}, ${address.state} ${address.pincode}\n\n`;
+    message += `*Order Items:*\n`;
+    
+    items.forEach((item, index) => {
+      message += `${index + 1}. ${item.variety.name} (${item.selectedWeight}kg box) x ${item.quantity}\n`;
+      if (item.giftOptions?.isGift) {
+        message += `   🎁 Gift for: ${item.giftOptions.recipientName}\n`;
+        if (item.giftOptions.message) {
+          message += `   📝 Message: "${item.giftOptions.message}"\n`;
+        }
+      }
+    });
+
+    message += `\n*Total Estimate:* ${formatCurrency(total)}\n`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/917830644446?text=${encodedMessage}`, '_blank');
+
     setOrderComplete(true);
     setTimeout(() => {
       clearCart();
