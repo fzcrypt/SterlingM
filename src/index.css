@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-logo: "Bodoni Moda", serif;
+  --font-serif: "Fraunces", serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-parchment: #F5F2ED;
+  --color-mango: #FFCC00;
+  --color-leaf: #2E7D32;
+  --color-ink: #1A1A1A;
+  --color-charcoal: #1A1A1A;
+  --color-warm-gray: #757575;
+  --color-border-subtle: rgba(26, 26, 26, 0.15);
+}
+
+@layer base {
+  body {
+    @apply bg-parchment text-ink font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+.premium-border {
+  @apply border border-border-subtle;
+}
+
+.section-tag {
+  @apply text-[10px] uppercase tracking-[0.2em] text-leaf font-bold mb-4 block;
+}
+
+.premium-blur {
+  @apply backdrop-blur-md bg-parchment/80;
+}
+
+.cta-prestige {
+  @apply inline-block px-8 py-4 bg-leaf text-white font-bold text-[12px] uppercase tracking-[0.1em] transition-all hover:bg-ink;
+}
