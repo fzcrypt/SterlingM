@@ -11,7 +11,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     harvestDate: 'June 15, 2026',
     purityScore: 99,
     certification: ['Organic Certified', 'Carbide-Free', 'Hand-Picked'],
-    images: ['/dasheri.jpg'],
+    images: ['https://images.unsplash.com/photo-1553279768-865429fa0078?q=80&w=2574&auto=format&fit=crop'],
     availableWeights: [1, 2, 5, 10]
   },
   {
@@ -24,7 +24,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     harvestDate: 'July 1, 2026',
     purityScore: 100,
     certification: ['Organic Certified', 'Carbide-Free'],
-    images: ['/langra.jpg'],
+    images: ['https://images.unsplash.com/photo-1601493700631-2b1660d1b32d?q=80&w=2574&auto=format&fit=crop'],
     availableWeights: [2, 5, 10]
   },
   {
@@ -37,7 +37,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     harvestDate: 'July 15, 2026',
     purityScore: 98,
     certification: ['Organic Certified', 'Carbide-Free', 'Naturally Ripened'],
-    images: ['/chaunsa.jpg'],
+    images: ['https://images.unsplash.com/photo-1591073113125-e46713c829ed?q=80&w=2574&auto=format&fit=crop'],
     availableWeights: [5, 10]
   },
   {
@@ -50,7 +50,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     harvestDate: 'May 10, 2026',
     purityScore: 100,
     certification: ['Organic Certified', 'Carbide-Free', 'Export Grade'],
-    images: ['/alphonso.jpg'],
+    images: ['https://images.unsplash.com/photo-1605807646983-377bc5a76493?q=80&w=2574&auto=format&fit=crop'],
     availableWeights: [3, 6]
   }
 ];
@@ -61,7 +61,7 @@ export const FARM_LOGS: FarmLog[] = [
     date: 'April 25, 2026',
     activity: 'Tree Pruning & Nutrition',
     description: 'Carefully pruned 200 Dasheri trees to ensure better sunlight penetration for the upcoming harvest. Applied fermented organic compost.',
-    image: '/pruning.png',
+    image: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=2574&auto=format&fit=crop',
     category: 'Pruning'
   },
   {
@@ -69,7 +69,7 @@ export const FARM_LOGS: FarmLog[] = [
     date: 'April 28, 2026',
     activity: 'Fruit Inspection',
     description: 'Random sampling of Langra fruits showed excellent skin health and zero pest infestation. Organic neem oil spray applied as a preventive measure.',
-    image: '/Gemini_Generated_Image_c1lt6bc1lt6bc1lt.png',
+    image: 'https://images.unsplash.com/photo-1591073113125-e46713c829ed?q=80&w=2574&auto=format&fit=crop',
     category: 'Inspection'
   }
 ];

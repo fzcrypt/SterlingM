@@ -24,7 +24,7 @@ export default function HeroSection() {
             <div 
               className="w-1/2 h-full bg-cover bg-center border-l border-white/20"
               style={{
-                backgroundImage: 'url("/mango-orchard-at-dawn-photo-high-res.png")',
+                backgroundImage: 'url("https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?q=80&w=2678&auto=format&fit=crop")',
               }}
             />
           </motion.div>
