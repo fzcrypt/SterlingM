@@ -16,15 +16,9 @@ export default function HeroSection() {
             className="absolute inset-0 z-0 flex transition-transform duration-700 group-hover:scale-105"
           >
             <div 
-              className="w-1/2 h-full bg-cover bg-center"
+              className="w-full h-full bg-cover bg-center"
               style={{
-                backgroundImage: 'url("https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&q=80&w=2600")',
-              }}
-            />
-            <div 
-              className="w-1/2 h-full bg-cover bg-center border-l border-white/20"
-              style={{
-                backgroundImage: 'url("https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?q=80&w=2678&auto=format&fit=crop")',
+                backgroundImage: 'url("/mango-orchard-at-dawn-photo-high-res.png")',
               }}
             />
           </motion.div>
