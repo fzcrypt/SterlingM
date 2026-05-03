@@ -48,14 +48,14 @@ export default function Home() {
             <div className="flex gap-4">
               <div className="relative z-10 rounded-[2rem] overflow-hidden aspect-[4/5] flex-1 border-4 border-mango/20">
                 <img 
-                  src="/heritage-2.jpg" 
+                  src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2574&auto=format&fit=crop" 
                   alt="Heritage Trees" 
                   className="w-full h-full object-cover" 
                 />
               </div>
               <div className="relative z-10 rounded-[2rem] overflow-hidden mt-16 aspect-[4/5] flex-1 border-4 border-mango/20 shadow-2xl">
                 <img 
-                  src="/mango-orchard-at-dawn-photo.jpg" 
+                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2587&auto=format&fit=crop" 
                   alt="Farm Heritage" 
                   className="w-full h-full object-cover" 
                 />

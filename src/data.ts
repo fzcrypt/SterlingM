@@ -11,7 +11,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     harvestDate: 'June 15, 2026',
     purityScore: 99,
     certification: ['Organic Certified', 'Carbide-Free', 'Hand-Picked'],
-    images: ['/dasheri-mango.jpg'],
+    images: ['/dasheri.jpg'],
     availableWeights: [1, 2, 5, 10]
   },
   {
@@ -24,7 +24,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     harvestDate: 'July 1, 2026',
     purityScore: 100,
     certification: ['Organic Certified', 'Carbide-Free'],
-    images: ['/langra-mango.jpg'],
+    images: ['/langra.jpg'],
     availableWeights: [2, 5, 10]
   },
   {
@@ -37,7 +37,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     harvestDate: 'July 15, 2026',
     purityScore: 98,
     certification: ['Organic Certified', 'Carbide-Free', 'Naturally Ripened'],
-    images: ['/chaunsa-mango.jpg'],
+    images: ['/chaunsa.jpg'],
     availableWeights: [5, 10]
   },
   {
