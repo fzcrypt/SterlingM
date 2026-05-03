@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 const MEDIA_ITEMS = [
   {
     type: 'image',
-    src: 'https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?q=80&w=2678&auto=format&fit=crop',
+    src: '/mango-orchard-at-dawn-photo-high-res.png',
     alt: 'Mango orchard at dawn'
   },
   {
@@ -15,7 +15,7 @@ const MEDIA_ITEMS = [
   },
   {
     type: 'image',
-    src: 'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2587&auto=format&fit=crop',
+    src: '/heritage-2.jpg',
     alt: 'Heritage tree'
   },
   {
