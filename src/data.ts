@@ -50,7 +50,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     harvestDate: 'May 10, 2026',
     purityScore: 100,
     certification: ['Organic Certified', 'Carbide-Free', 'Export Grade'],
-    images: ['https://images.unsplash.com/photo-1605807646983-377bc5a76493?q=80&w=2574&auto=format&fit=crop'],
+    images: ['/alphonso.jpg'],
     availableWeights: [3, 6]
   }
 ];
@@ -69,7 +69,7 @@ export const FARM_LOGS: FarmLog[] = [
     date: 'April 28, 2026',
     activity: 'Fruit Inspection',
     description: 'Random sampling of Langra fruits showed excellent skin health and zero pest infestation. Organic neem oil spray applied as a preventive measure.',
-    image: '/hero-mango-generated.png',
+    image: '/mango-orchard-at-dawn-photo.jpg',
     category: 'Inspection'
   }
 ];

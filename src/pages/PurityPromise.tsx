@@ -69,7 +69,7 @@ export default function PurityPromise() {
           </div>
           <div className="md:w-1/2">
             <div className="aspect-video rounded-3xl overflow-hidden border-4 border-parchment/10 relative">
-              <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2574&auto=format&fit=crop" alt="Organic Document" className="w-full h-full object-cover opacity-70" />
+              <img src="/heritage-2.jpg" alt="Organic Document" className="w-full h-full object-cover opacity-70" />
             </div>
           </div>
         </div>
