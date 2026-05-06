@@ -4,7 +4,7 @@ import langraImg from './assets/langra.jpg';
 import chaunsaImg from './assets/chaunsa.jpg';
 import alphonsoImg from './assets/alphonso.jpg';
 import pruningImg from './assets/pruning.png';
-import orchardDawnImg from './assets/mango-orchard-at-dawn-photo.jpg';
+import orchardDawnImg from './assets/mango-orchard-at-dawn-photo-high-res.png';
 
 export const MANGO_VARIETIES: MangoVariety[] = [
   {

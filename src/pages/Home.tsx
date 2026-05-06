@@ -5,8 +5,8 @@ import ProcessSection from '../components/home/ProcessSection';
 import FarmLogsTeaser from '../components/home/FarmLogsTeaser';
 import { MapPin, Info, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heritageImg from '../assets/heritage-2.jpg';
-import farmHeritageImg from '../assets/mango-orchard-at-dawn-photo.jpg';
+import heritageImg from '../assets/hero-mango-generated.png';
+import farmHeritageImg from '../assets/mango-orchard-at-dawn-photo-high-res.png';
 
 export default function Home() {
   return (

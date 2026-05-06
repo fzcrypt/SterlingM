@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ShieldCheck, Award, Zap, Heart, CheckCircle2 } from 'lucide-react';
-import heritageImg from '../assets/heritage-2.jpg';
+import heritageImg from '../assets/hero-mango-generated.png';
 
 export default function PurityPromise() {
   const points = [

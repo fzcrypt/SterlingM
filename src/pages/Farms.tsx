@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 
 import orchardDawnHighResImg from '../assets/mango-orchard-at-dawn-photo-high-res.png';
-import heritageImg from '../assets/heritage-2.jpg';
-import orchardDawnImg from '../assets/mango-orchard-at-dawn-photo.jpg';
+import heritageImg from '../assets/hero-mango-generated.png';
+import orchardDawnImg from '../assets/mango-orchard-at-dawn-photo-high-res.png';
 
 const MEDIA_ITEMS = [
   {
