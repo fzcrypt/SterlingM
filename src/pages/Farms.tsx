@@ -2,10 +2,14 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 
+import orchardDawnHighResImg from '../assets/mango-orchard-at-dawn-photo-high-res.png';
+import heritageImg from '../assets/heritage-2.jpg';
+import orchardDawnImg from '../assets/mango-orchard-at-dawn-photo.jpg';
+
 const MEDIA_ITEMS = [
   {
     type: 'image',
-    src: '/mango-orchard-at-dawn-photo-high-res.png',
+    src: orchardDawnHighResImg,
     alt: 'Mango orchard at dawn'
   },
   {
@@ -15,12 +19,12 @@ const MEDIA_ITEMS = [
   },
   {
     type: 'image',
-    src: '/heritage-2.jpg',
+    src: heritageImg,
     alt: 'Heritage tree'
   },
   {
     type: 'image',
-    src: '/mango-orchard-at-dawn-photo.jpg',
+    src: orchardDawnImg,
     alt: 'Heritage orchard'
   }
 ];

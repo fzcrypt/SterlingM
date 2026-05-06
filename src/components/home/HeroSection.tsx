@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ChevronRight, ShieldCheck, TreePine } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '../../lib/utils';
+import heroBgImg from '../../assets/mango-orchard-at-dawn-photo-high-res.png';
 
 export default function HeroSection() {
   return (
@@ -18,7 +19,7 @@ export default function HeroSection() {
             <div 
               className="w-full h-full bg-cover bg-center"
               style={{
-                backgroundImage: 'url("/mango-orchard-at-dawn-photo-high-res.png")',
+                backgroundImage: `url(${heroBgImg})`,
               }}
             />
           </motion.div>

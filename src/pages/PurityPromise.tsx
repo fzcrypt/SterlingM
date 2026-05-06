@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ShieldCheck, Award, Zap, Heart, CheckCircle2 } from 'lucide-react';
+import heritageImg from '../assets/heritage-2.jpg';
 
 export default function PurityPromise() {
   const points = [
@@ -69,7 +70,7 @@ export default function PurityPromise() {
           </div>
           <div className="md:w-1/2">
             <div className="aspect-video rounded-3xl overflow-hidden border-4 border-parchment/10 relative">
-              <img src="/heritage-2.jpg" alt="Organic Document" className="w-full h-full object-cover opacity-70" />
+              <img src={heritageImg} alt="Organic Document" className="w-full h-full object-cover opacity-70" />
             </div>
           </div>
         </div>
