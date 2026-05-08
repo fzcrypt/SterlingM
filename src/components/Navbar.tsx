@@ -87,7 +87,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[60] bg-parchment p-8"
+            className="fixed inset-0 z-[60] bg-parchment/90 backdrop-blur-xl p-8"
           >
             <div className="flex justify-end">
               <button onClick={() => setIsOpen(false)} className="p-2 text-charcoal">
