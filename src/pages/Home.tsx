@@ -5,8 +5,7 @@ import ProcessSection from '../components/home/ProcessSection';
 import FarmLogsTeaser from '../components/home/FarmLogsTeaser';
 import { MapPin, Info, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heritageImg from '../assets/hero-mango-generated.png';
-import farmHeritageImg from '../assets/mango-orchard-at-dawn-photo-high-res.png';
+import rampurOrchardImg from '../assets/rampur-orchard.jpg';
 
 export default function Home() {
   return (
@@ -47,21 +46,12 @@ export default function Home() {
             </div>
           </div>
           <div className="md:w-1/2 relative">
-            <div className="flex gap-4">
-              <div className="relative z-10 rounded-[2rem] overflow-hidden aspect-[4/5] flex-1 border-4 border-mango/20">
-                <img 
-                  src={heritageImg} 
-                  alt="Heritage Trees" 
-                  className="w-full h-full object-cover" 
-                />
-              </div>
-              <div className="relative z-10 rounded-[2rem] overflow-hidden mt-16 aspect-[4/5] flex-1 border-4 border-mango/20 shadow-2xl">
-                <img 
-                  src={farmHeritageImg} 
-                  alt="Farm Heritage" 
-                  className="w-full h-full object-cover" 
-                />
-              </div>
+            <div className="relative z-10 w-full h-[600px] rounded-[2rem] overflow-hidden border-4 border-mango/20 shadow-2xl">
+              <img 
+                src={rampurOrchardImg} 
+                alt="Rampur Orchard with Charpai" 
+                className="w-full h-full object-cover" 
+              />
             </div>
             {/* Floating location card */}
             <div className="absolute -bottom-8 left-4 z-20 premium-blur p-6 rounded-3xl border border-parchment/10 max-w-[240px] shadow-xl">
