@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { FARM_LOGS } from '../data';
 import { FarmLogCategory } from '../types';
 import { Calendar, Tag, Search, Sparkles } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function FarmLogs() {
   const [activeCategory, setActiveCategory] = useState<FarmLogCategory | 'All'>('All');
@@ -18,6 +19,11 @@ export default function FarmLogs() {
       exit={{ opacity: 0 }}
       className="pt-32 pb-24 px-8 bg-parchment min-h-screen"
     >
+      <SEO 
+        title="Daily Farm Logs" 
+        description="Experience complete transparency. Witness the journey of our heritage mangoes from blossom to harvest with daily updates from our Rampur orchards."
+        path="/farm-logs"
+      />
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-20 text-center max-w-3xl mx-auto">

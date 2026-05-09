@@ -1,10 +1,11 @@
 import { useState, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'motion/react';
+import SEO from '../components/SEO';
 import { MANGO_VARIETIES } from '../data';
 import { useCart } from '../context/CartContext';
 import { formatCurrency } from '../lib/utils';
-import { ShieldCheck, Info, ArrowLeft, Plus, Minus, TreePine, Package, Truck } from 'lucide-react';
+import { ShieldCheck, Info, ArrowLeft, Plus, Minus, TreePine, Package, Truck, Sparkles } from 'lucide-react';
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -49,6 +50,7 @@ export default function ProductDetail() {
   if (!variety) {
     return (
       <div className="pt-32 pb-24 text-center">
+        <SEO title="Variety Not Found" description="The requested mango variety could not be found." />
         <h1 className="text-4xl font-serif">Variety not found</h1>
         <button onClick={() => navigate('/catalog')} className="mt-4 text-leaf font-bold underline">Back to catalog</button>
       </div>
@@ -64,6 +66,21 @@ export default function ProductDetail() {
     navigate('/cart');
   };
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": variety.name,
+    "image": variety.images,
+    "description": variety.description,
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": variety.pricePerKg,
+      "availability": variety.seasonStatus === 'In Stock' ? "https://schema.org/InStock" : "https://schema.org/PreOrder",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -71,6 +88,12 @@ export default function ProductDetail() {
       exit={{ opacity: 0 }}
       className="pt-32 pb-24 px-8 bg-parchment min-h-screen"
     >
+      <SEO 
+        title={`${variety.name} Mangoes`} 
+        description={`Buy premium, carbide-free ${variety.name} mangoes. ${variety.description.substring(0, 120)}...`}
+        path={`/product/${variety.id}`}
+        schema={productSchema}
+      />
       <div className="max-w-7xl mx-auto">
         <button 
           onClick={() => navigate(-1)}
@@ -104,6 +127,18 @@ export default function ProductDetail() {
             </div>
             <h1 className="text-5xl md:text-7xl font-serif mb-2">{variety.name}</h1>
             <p className="text-sm text-warm-gray italic mb-8 ml-1">{variety.scientificName}</p>
+
+            <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-center justify-between mb-8 animate-pulse">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600">
+                  <Sparkles size={20} />
+                </div>
+                <div>
+                  <p className="font-bold text-red-700 text-sm">High Demand</p>
+                  <p className="text-xs text-red-600/80 font-medium">Only 4 boxes left of this variety today!</p>
+                </div>
+              </div>
+            </div>
 
             <div className="flex items-baseline gap-4 mb-10 pb-8 border-b border-charcoal/10">
               <span className="text-4xl font-serif font-bold text-leaf">{formatCurrency(variety.pricePerKg)}</span>

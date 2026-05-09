@@ -3,6 +3,7 @@ import dasheriImg from "./assets/dasheri.jpg";
 import langraImg from "./assets/langra.jpg";
 import chaunsaImg from "./assets/chaunsa.jpg";
 import hapoosImg from "./assets/hapoos.jpg";
+import totapariImg from "./assets/totapari.jpeg";
 import pruningImg from "./assets/pruning.png";
 import orchardDawnImg from "./assets/mango-orchard-at-dawn-photo-high-res.png";
 
@@ -62,6 +63,19 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     certification: ["Organic Certified", "Carbide-Free", "Export Grade"],
     images: [hapoosImg],
     availableWeights: [3, 6],
+  },
+  {
+    id: "totapari",
+    name: "Totapari",
+    scientificName: "Mangifera indica L. var. Totapari",
+    description: "Totapari or Totapuri mango is known for its distinct shape resembling a parrot's beak. It has a tangy flavor and is excellent for making pickles, salads, and juices.",
+    pricePerKg: 399,
+    seasonStatus: "In Stock",
+    harvestDate: "June 20, 2026",
+    purityScore: 99,
+    certification: ["Organic Certified", "Carbide-Free", "Hand-Picked"],
+    images: [totapariImg],
+    availableWeights: [2, 5, 10],
   },
 ];
 

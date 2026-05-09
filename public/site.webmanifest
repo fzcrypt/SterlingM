@@ -1,0 +1,22 @@
+{
+  "name": "Sterling Mangoes",
+  "short_name": "Sterling",
+  "description": "Premium, heritage, direct-to-consumer luxury mango produce.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FCFAF2",
+  "theme_color": "#4A5D23",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/og-image.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/og-image.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

@@ -8,6 +8,9 @@ interface CartContextType {
   clearCart: () => void;
   total: number;
   itemCount: number;
+  orderGiftWrap: boolean;
+  setOrderGiftWrap: (wrap: boolean) => void;
+  giftWrapTotal: number;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -17,10 +20,15 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     const saved = localStorage.getItem('sterling-mangoes-cart');
     return saved ? JSON.parse(saved) : [];
   });
+  const [orderGiftWrap, setOrderGiftWrap] = useState(() => {
+    const saved = localStorage.getItem('sterling-mangoes-order-wrap');
+    return saved === 'true';
+  });
 
   useEffect(() => {
     localStorage.setItem('sterling-mangoes-cart', JSON.stringify(items));
-  }, [items]);
+    localStorage.setItem('sterling-mangoes-order-wrap', orderGiftWrap.toString());
+  }, [items, orderGiftWrap]);
 
   const addToCart = (variety: MangoVariety, quantity: number, selectedWeight: number, giftOptions?: import('../types').GiftOptions) => {
     setItems(prev => [...prev, { variety, quantity, selectedWeight, giftOptions }]);
@@ -32,13 +40,16 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const clearCart = () => {
     setItems([]);
+    setOrderGiftWrap(false);
   };
 
-  const total = items.reduce((sum, item) => sum + (item.variety.pricePerKg * item.selectedWeight * item.quantity), 0);
+  const itemsTotal = items.reduce((sum, item) => sum + (item.variety.pricePerKg * item.selectedWeight * item.quantity), 0);
+  const giftWrapTotal = orderGiftWrap ? 299 : 0;
+  const total = itemsTotal + giftWrapTotal;
   const itemCount = items.length;
 
   return (
-    <CartContext.Provider value={{ items, addToCart, removeFromCart, clearCart, total, itemCount }}>
+    <CartContext.Provider value={{ items, addToCart, removeFromCart, clearCart, total, itemCount, orderGiftWrap, setOrderGiftWrap, giftWrapTotal }}>
       {children}
     </CartContext.Provider>
   );

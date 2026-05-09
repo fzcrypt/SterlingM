@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Phone, Mail, Instagram, MessageCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Contact() {
   return (
@@ -9,6 +10,11 @@ export default function Contact() {
       exit={{ opacity: 0 }}
       className="pt-32 pb-24 px-8 min-h-screen bg-parchment"
     >
+      <SEO 
+        title="Contact Us" 
+        description="Get in touch with Sterling Mangoes' harvest concierge. Available Monday to Saturday for inquiries about our heritage mangoes or your order."
+        path="/contact"
+      />
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-serif mb-6 text-charcoal">Contact Us</h1>
@@ -31,8 +37,8 @@ export default function Contact() {
               <a href="tel:+917830644446" className="flex items-center gap-3 text-lg font-medium text-charcoal hover:text-leaf transition-colors">
                 +91 7830644446
               </a>
-              <a href="tel:+919045334379" className="flex items-center gap-3 text-lg font-medium text-charcoal hover:text-leaf transition-colors">
-                +91 9045334379
+              <a href="tel:+919105204845" className="flex items-center gap-3 text-lg font-medium text-charcoal hover:text-leaf transition-colors">
+                +91 9105204845
               </a>
             </div>
           </div>

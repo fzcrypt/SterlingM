@@ -101,8 +101,9 @@ export default function HeroSection() {
              animate={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.5, delay: 1.1 }}
           >
-            <Link to="/catalog" className="cta-prestige text-center shadow-2xl hover:-translate-y-1">
-              Secure My Harvest
+            <Link to="/catalog" className="cta-prestige text-center shadow-2xl shadow-leaf/30 hover:-translate-y-1 relative overflow-hidden group/cta flex items-center justify-center gap-3">
+              <span className="relative z-10 w-full text-center font-bold tracking-widest text-[11px] uppercase">Claim Harvest Offers</span>
+              <div className="absolute inset-0 h-full w-0 bg-white/20 transition-all duration-300 ease-out group-hover/cta:w-full"></div>
             </Link>
           </motion.div>
           

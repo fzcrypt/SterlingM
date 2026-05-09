@@ -1,12 +1,20 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
+import SEO from '../components/SEO';
 
 import orchardDawnHighResImg from '../assets/mango-orchard-at-dawn-photo-high-res.png';
 import heritageImg from '../assets/hero-mango-generated.png';
 import orchardDawnImg from '../assets/mango-orchard-at-dawn-photo-high-res.png';
 
+import rampurOrchardImg from '../assets/rampur-orchard.jpg';
+
 const MEDIA_ITEMS = [
+  {
+    type: 'image',
+    src: rampurOrchardImg,
+    alt: 'Rampur Orchard with Charpai'
+  },
   {
     type: 'image',
     src: orchardDawnHighResImg,
@@ -56,6 +64,11 @@ export default function Farms() {
       exit={{ opacity: 0 }}
       className="pt-32 pb-24 px-8 bg-parchment min-h-screen"
     >
+      <SEO 
+        title="Our Heritage Orchards" 
+        description="Experience the lush greenery and heritage of our farms in Rampur. Explore 200+ acres of organic stewardship."
+        path="/farms"
+      />
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-5xl md:text-7xl font-serif mb-6 text-charcoal">Our Orchards</h1>

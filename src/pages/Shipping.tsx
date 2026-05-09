@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Truck } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Shipping() {
   return (
@@ -9,6 +10,11 @@ export default function Shipping() {
       exit={{ opacity: 0 }}
       className="pt-32 pb-24 px-8 min-h-screen bg-parchment"
     >
+      <SEO 
+        title="Shipping Policy" 
+        description="Learn about our shipping and delivery process. We deliver our heritage mangoes directly to your doorstep across India."
+        path="/shipping"
+      />
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <div className="w-16 h-16 bg-leaf/10 rounded-full flex items-center justify-center mx-auto mb-6 text-leaf">

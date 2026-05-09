@@ -28,8 +28,9 @@ export default function Navbar() {
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-12 py-6",
-      scrolled ? "bg-parchment/95 backdrop-blur-sm border-b border-border-subtle py-4" : "bg-transparent"
+      "fixed left-0 right-0 z-50 transition-all duration-300 px-12 py-6",
+      scrolled ? "bg-parchment/95 backdrop-blur-sm border-b border-border-subtle py-4 top-0" : "bg-transparent top-0 md:top-[36px]",
+      "transition-all"
     )}>
       <div className="max-w-[1400px] mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">

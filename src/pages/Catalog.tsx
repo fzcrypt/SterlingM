@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
+import SEO from '../components/SEO';
 import { MANGO_VARIETIES } from '../data';
 import ProductCard from '../components/ProductCard';
 import { Search, Filter, Sparkles, Truck } from 'lucide-react';
@@ -41,6 +42,11 @@ export default function Catalog() {
       exit={{ opacity: 0 }}
       className="pt-32 pb-24 px-8 min-h-screen bg-parchment"
     >
+      <SEO 
+        title="Mango Varieties & Catalog" 
+        description="Browse our seasonal collections of heritage mangoes including Dasheri, Langra, Chaunsa and Alphonso. Reserve your harvest today."
+        path="/catalog"
+      />
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">

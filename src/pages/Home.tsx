@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import SEO from "../components/SEO";
 import HeroSection from "../components/home/HeroSection";
 import FeaturedVarieties from "../components/home/FeaturedVarieties";
 import ProcessSection from "../components/home/ProcessSection";
@@ -8,6 +9,18 @@ import { Link } from "react-router-dom";
 import rampurOrchardImg from "../assets/rampur-orchard.jpg";
 
 export default function Home() {
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Sterling Mangoes",
+    "url": "https://sterlingmangoes.in",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://sterlingmangoes.in/catalog?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -15,6 +28,12 @@ export default function Home() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO 
+        title="Premium Heritage Mangoes from Rampur" 
+        description="Experience the taste of pure sunshine. Direct-to-consumer luxury Dasheri, Langra, Chaunsa and Alphonso mangoes from our 100-year-old Rampur orchards."
+        path="/"
+        schema={websiteSchema}
+      />
       <HeroSection />
       <ProcessSection />
       <FeaturedVarieties />

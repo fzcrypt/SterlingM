@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import SEO from '../components/SEO';
 import { ShieldCheck, Award, Zap, Heart, CheckCircle2 } from 'lucide-react';
 import heritageImg from '../assets/hero-mango-generated.png';
 
@@ -33,6 +34,11 @@ export default function PurityPromise() {
       exit={{ opacity: 0 }}
       className="pt-32 pb-24 px-8 bg-parchment min-h-screen"
     >
+      <SEO 
+        title="Our Purity Promise" 
+        description="Sterling Mangoes promises 100% carbide-free ripening, organic cultivation, hand-picked selection, and completely traceable origin for all our heritage mangoes."
+        path="/purity"
+      />
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-24">
           <ShieldCheck size={64} className="text-leaf mx-auto mb-8" />

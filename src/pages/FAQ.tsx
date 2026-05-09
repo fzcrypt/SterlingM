@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const FAQS = [
   {
@@ -39,6 +40,11 @@ export default function FAQ() {
       exit={{ opacity: 0 }}
       className="pt-32 pb-24 px-8 min-h-screen bg-parchment"
     >
+      <SEO 
+        title="FAQ" 
+        description="Common questions about Sterling Mangoes, our harvesting process, carbide-free ripening, and delivery."
+        path="/faq"
+      />
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-serif mb-6 text-charcoal">FAQ</h1>

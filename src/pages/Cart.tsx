@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCart } from '../context/CartContext';
 import { formatCurrency } from '../lib/utils';
-import { Trash2, ArrowRight, ShoppingBag, ShieldCheck, Truck, MapPin, Calendar, CheckCircle2 } from 'lucide-react';
+import { Trash2, ArrowRight, ShoppingBag, ShieldCheck, Truck, MapPin, Calendar, CheckCircle2, Gift } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function Cart() {
-  const { items, removeFromCart, total, itemCount, clearCart } = useCart();
+  const { items, removeFromCart, total, itemCount, clearCart, orderGiftWrap, setOrderGiftWrap, giftWrapTotal } = useCart();
   const navigate = useNavigate();
   const [checkoutStep, setCheckoutStep] = useState(1); // 1: Cart, 2: Shipping, 3: Confirmation
   const [address, setAddress] = useState({
@@ -53,6 +54,10 @@ export default function Cart() {
       }
     });
 
+    if (orderGiftWrap) {
+      message += `\n🎀 Entire Order Premium Gift Wrapped (+₹299)\n`;
+    }
+
     message += `\n*Total Estimate:* ${formatCurrency(total)}\n`;
     
     const encodedMessage = encodeURIComponent(message);
@@ -68,6 +73,7 @@ export default function Cart() {
   if (orderComplete) {
     return (
       <div className="pt-40 pb-24 px-8 text-center min-h-screen bg-parchment flex items-center justify-center">
+        <SEO title="Order Confirmed" description="Thank you for your purchase from Sterling Mangoes." />
         <motion.div 
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -87,6 +93,7 @@ export default function Cart() {
   if (itemCount === 0) {
     return (
       <div className="pt-40 pb-24 px-8 text-center min-h-screen bg-parchment">
+        <SEO title="Your Cart" description="Your shopping cart is currently empty." />
         <div className="max-w-md mx-auto">
           <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center text-warm-gray mx-auto mb-8 border border-charcoal/5">
             <ShoppingBag size={40} />
@@ -103,6 +110,7 @@ export default function Cart() {
 
   return (
     <div className="pt-32 pb-24 px-8 bg-parchment min-h-screen">
+      <SEO title="Checkout" description="Secure checkout for your Sterling Mangoes order." />
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
           <div className={`text-sm font-bold uppercase tracking-widest ${checkoutStep >= 1 ? 'text-charcoal' : 'text-charcoal/30'}`}>1. Cart</div>
@@ -183,8 +191,14 @@ export default function Cart() {
                   <div className="space-y-6 mb-10 border-b border-parchment/10 pb-8">
                     <div className="flex justify-between text-sm uppercase tracking-widest font-bold text-parchment/60">
                       <span>Subtotal</span>
-                      <span>{formatCurrency(total)}</span>
+                      <span>{formatCurrency(total - giftWrapTotal)}</span>
                     </div>
+                    {giftWrapTotal > 0 && (
+                      <div className="flex justify-between text-sm uppercase tracking-widest font-bold text-mango">
+                        <span>Gift Wrap</span>
+                        <span>{formatCurrency(giftWrapTotal)}</span>
+                      </div>
+                    )}
                     <div className="flex justify-between text-sm uppercase tracking-widest font-bold text-parchment/60">
                       <span>Harvest Packing</span>
                       <span className="text-mango">Free</span>
@@ -194,6 +208,26 @@ export default function Cart() {
                       <span className="text-mango">Calculated at Step 2</span>
                     </div>
                   </div>
+
+                  {/* Entire Order Gift Wrap Toggle */}
+                  <div className="mb-10 bg-white/5 p-4 rounded-xl border border-white/10 flex items-start gap-4">
+                    <Gift size={24} className="text-mango shrink-0" />
+                    <div>
+                      <label className="flex items-center gap-2 cursor-pointer mb-1">
+                        <input 
+                          type="checkbox" 
+                          checked={orderGiftWrap}
+                          onChange={(e) => setOrderGiftWrap(e.target.checked)}
+                          className="w-4 h-4 rounded border-white/20 text-mango focus:ring-mango bg-transparent"
+                        />
+                        <span className="text-sm font-bold text-parchment">Gift Wrap Entire Order</span>
+                      </label>
+                      <p className="text-xs text-parchment/60 leading-relaxed">
+                        We'll pack your entire harvest in a single, premium presentation box (+₹299).
+                      </p>
+                    </div>
+                  </div>
+
                   <div className="flex justify-between items-baseline mb-12">
                     <span className="font-serif text-xl">Order Total</span>
                     <span className="font-serif text-4xl text-mango">{formatCurrency(total)}</span>

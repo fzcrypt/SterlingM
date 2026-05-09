@@ -9,7 +9,7 @@ export default function FeaturedVarieties() {
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 border-b border-border-subtle pb-8">
           <div className="max-w-2xl">
-            <span className="section-tag mb-4">Seasonal Reserve</span>
+            <span className="section-tag mb-4 bg-red-100 text-red-800 border-red-200 animate-pulse inline-block">Selling Fast • Limited Quotas</span>
             <h2 className="text-5xl md:text-7xl font-serif leading-[1.1] text-ink">
               Selected from our <br />
               <span className="italic">Heritage Blocks</span>
