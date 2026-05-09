@@ -7,14 +7,17 @@ export default function MarketingPopup() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!sessionStorage.getItem('sterling_popup_seen')) {
+    const handleMouseLeave = (e: MouseEvent) => {
+      // Check if mouse is moving out of the top of the window
+      if (e.clientY <= 0 && !sessionStorage.getItem('sterling_popup_seen')) {
         setIsOpen(true);
         sessionStorage.setItem('sterling_popup_seen', 'true');
       }
-    }, 5000); // Show quickly for aggressive marketing
+    };
 
-    return () => clearTimeout(timer);
+    document.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => document.removeEventListener('mouseleave', handleMouseLeave);
   }, []);
 
   return (
