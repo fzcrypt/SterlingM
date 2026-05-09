@@ -5,7 +5,11 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useCart } from '../context/CartContext';
 import { cn } from '../lib/utils';
 
-export default function Navbar() {
+interface NavbarProps {
+  promoVisible?: boolean;
+}
+
+export default function Navbar({ promoVisible }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { itemCount } = useCart();
@@ -27,19 +31,24 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={cn(
-      "fixed left-0 right-0 z-50 transition-all duration-300 px-12 py-6",
-      scrolled ? "bg-parchment/95 backdrop-blur-sm border-b border-border-subtle py-4 top-0" : "bg-transparent top-0 md:top-[36px]",
-      "transition-all"
-    )}>
+    <nav 
+      className={cn(
+        "fixed left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 py-4 md:py-6",
+        scrolled ? "bg-parchment/95 backdrop-blur-sm border-b border-border-subtle py-3 md:py-4" : "bg-transparent",
+        "transition-all"
+      )}
+      style={{
+        top: scrolled ? 0 : promoVisible ? 36 : 0
+      }}
+    >
       <div className="max-w-[1400px] mx-auto flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-leaf rounded-full flex items-center justify-center text-mango p-2 transition-transform group-hover:rotate-12">
+        <Link to="/" className="flex items-center gap-2 group shrink-0">
+          <div className="w-10 h-10 shrink-0 bg-leaf rounded-full flex items-center justify-center text-mango p-2 transition-transform group-hover:rotate-12">
             <Leaf size={24} strokeWidth={2.5} />
           </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-xl font-bold leading-none text-leaf">STERLING</span>
-            <span className="font-sans text-[10px] tracking-[0.2em] uppercase font-semibold text-warm-gray">Mangoes</span>
+          <div className="flex flex-col justify-center">
+            <span className="font-serif text-xl font-bold leading-[1.1] text-leaf">STERLING</span>
+            <span className="font-sans text-[10px] tracking-[0.2em] uppercase font-semibold text-warm-gray leading-tight mt-[1px]">Mangoes</span>
           </div>
         </Link>
 
