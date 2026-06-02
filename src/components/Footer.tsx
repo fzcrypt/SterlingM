@@ -53,6 +53,7 @@ export default function Footer() {
         
         <div className="flex flex-wrap justify-center gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-ink/40">
           <p>© 2026 Sterling Mangoes</p>
+          <p>GST Registered: Sterling Enterprises</p>
           <Link to="/shipping" className="hover:text-ink">Shipping</Link>
           <Link to="/faq" className="hover:text-ink">FAQ</Link>
           <Link to="/contact" className="hover:text-ink">Contact</Link>

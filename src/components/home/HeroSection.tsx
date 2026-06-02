@@ -74,7 +74,7 @@ export default function HeroSection() {
           <div className="space-y-4 mb-12 relative z-10">
             {[
               { name: 'Dasheri', status: 'In Stock', price: '₹199 / kg', statusClass: 'bg-leaf/10 text-leaf' },
-              { name: 'Langra', status: 'Pre-Order', price: '₹249 / kg', statusClass: 'bg-mango/20 text-ink' }
+              { name: 'Langra', status: 'Pre-Order', price: '₹199 / kg', statusClass: 'bg-mango/20 text-ink' }
             ].map((v, i) => (
               <motion.div 
                 custom={i}

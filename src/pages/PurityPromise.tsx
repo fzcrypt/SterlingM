@@ -69,7 +69,8 @@ export default function PurityPromise() {
             <p className="text-parchment/60 text-lg mb-8 font-medium">
               We are in the process of finalizing our ECOCERT documentation for the 2026 season. Until then, our "Open Farm" policy invites you to visit Rampur anytime to inspect our practices.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
+              <span className="px-4 py-2 bg-leaf/20 border border-leaf text-leaf text-[10px] font-bold rounded-full uppercase tracking-widest">FSSAI Registered</span>
               <span className="px-4 py-2 bg-leaf/20 border border-leaf text-leaf text-[10px] font-bold rounded-full uppercase tracking-widest">ECOCERT Pending</span>
               <span className="px-4 py-2 bg-mango/10 border border-mango text-mango text-[10px] font-bold rounded-full uppercase tracking-widest">NPOP Compliant</span>
             </div>

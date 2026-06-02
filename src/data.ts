@@ -28,7 +28,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     scientificName: "Mangifera indica L. var. Langra",
     description:
       "The 'Langra' mango, also known as Benarasi Langra, is a mango cultivar that was first cultivated in Banaras in present-day Uttar Pradesh, India 250 to 300 years ago. Apart from Uttar Pradesh, it is also grown in the states of Bihar and West Bengal. This cultivar retains a greenish tinge while ripening. It is normally harvested during mid-June to last half of July. Around 2006, it was known to be gaining popularity on the international market. It is considered suitable for slicing and canning.",
-    pricePerKg: 249,
+    pricePerKg: 199,
     seasonStatus: "Pre-Order",
     harvestDate: "July 1, 2026",
     purityScore: 100,
@@ -42,7 +42,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     scientificName: "Mangifera indica L. var. Chaunsa",
     description:
       'Chaunsa (Sindhi: چونسو, Punjabi: چونسا) is a variety of mango. Origin Chausa, Bihar India. Also called "sumer bahist" This variety of mango was originally made popular by Sher Shah Suri throughout the subcontinent. While commemorating his victory over Humayun at Chausa, he gave his favorite mango the name Chaunsa. Chaunsa mango has a golden yellow color when It is soft, almost fibreless and has an aromatic pleasant sweet flavor. Commonly available varieties in India are greenish-yellow. The unique taste and richness in its flavor makes it a worldwide favorite. Chaunsa is commonly called the "King of Mangoes". Overall it is considered the best mango in terms of its rich aroma, sweet taste, juicy pulp and high nutritional value. The season for Chaunsa in India normally starts at the beginning of June, and ends in the third week of August. Due to demand, it is heavily exported to the Middle East, Europe, and most recently to the United States. There are three known types of Chaunsa mangoes: Honey Chaunsa, Sweet Chaunsa, and White Chaunsa. White Chaunsa is considered best for export due to its longer shelf life.',
-    pricePerKg: 299,
+    pricePerKg: 199,
     seasonStatus: "Season Opening",
     harvestDate: "July 15, 2026",
     purityScore: 98,
@@ -69,7 +69,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     name: "Totapari",
     scientificName: "Mangifera indica L. var. Totapari",
     description: "Totapari or Totapuri mango is known for its distinct shape resembling a parrot's beak. It has a tangy flavor and is excellent for making pickles, salads, and juices.",
-    pricePerKg: 399,
+    pricePerKg: 149,
     seasonStatus: "In Stock",
     harvestDate: "June 20, 2026",
     purityScore: 99,
