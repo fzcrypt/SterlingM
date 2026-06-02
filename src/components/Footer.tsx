@@ -46,7 +46,7 @@ export default function Footer() {
             <span className="font-serif text-xl font-bold tracking-tight text-leaf">STERLING</span>
           </Link>
           <div className="flex gap-4">
-            <a href="#" className="text-ink/40 hover:text-leaf transition-colors"><Instagram size={18} /></a>
+            <a href="https://www.instagram.com/sterlingmangoesindia/" target="_blank" rel="noopener noreferrer" className="text-ink/40 hover:text-leaf transition-colors"><Instagram size={18} /></a>
             <a href="#" className="text-ink/40 hover:text-leaf transition-colors"><Facebook size={18} /></a>
           </div>
         </div>

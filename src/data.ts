@@ -14,7 +14,7 @@ export const MANGO_VARIETIES: MangoVariety[] = [
     scientificName: "Mangifera indica L. var. Dasheri",
     description:
       "The Dasheri mango is a mango cultivar which originated in a village near Malihabad in Lucknow district and was recognised in the 18th century. It is a sweet and fragrant variety of mango grown in India and Nepal. Malihabad in Uttar Pradesh is the largest producer.",
-    pricePerKg: 199,
+    pricePerKg: 149,
     seasonStatus: "In Stock",
     harvestDate: "June 15, 2026",
     purityScore: 99,

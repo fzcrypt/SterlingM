@@ -50,16 +50,16 @@ export default function Contact() {
             </div>
             <h2 className="text-2xl font-serif text-charcoal mb-4">Message Us</h2>
             <p className="text-charcoal/70 mb-6 min-h-[48px]">
-              Drop us a message on Instagram or write an email to us. We will get back to you shortly.
+              Drop us a message on Instagram or WhatsApp. We will get back to you shortly.
             </p>
             <div className="flex flex-col gap-4">
-              <a href="#" className="flex items-center gap-3 text-lg font-medium text-charcoal hover:text-leaf transition-colors">
+              <a href="https://www.instagram.com/sterlingmangoesindia/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-lg font-medium text-charcoal hover:text-leaf transition-colors">
                 <Instagram size={20} />
-                <span>@sterlingmangoes</span>
+                <span>@sterlingmangoesindia</span>
               </a>
-              <a href="mailto:hello@sterlingmangoes.com" className="flex items-center gap-3 text-lg font-medium text-charcoal hover:text-leaf transition-colors">
-                <Mail size={20} />
-                <span>hello@sterlingmangoes.com</span>
+              <a href="https://wa.me/917830644446" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-lg font-medium text-charcoal hover:text-leaf transition-colors">
+                <MessageCircle size={20} />
+                <span>+91 7830644446</span>
               </a>
             </div>
           </div>
