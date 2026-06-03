@@ -59,7 +59,7 @@ export default function MarketingPopup() {
               </span>
               <h2 className="text-4xl font-serif text-charcoal mb-4">Claim Your Welcome Offer</h2>
               <p className="text-charcoal/80 font-medium mb-8 leading-relaxed">
-                For the next <span className="font-bold text-charcoal">10 minutes</span>, get <span className="font-bold text-charcoal">Free Premium Gift Wrapping</span> (worth ₹299) and <span className="font-bold text-red-600">10% OFF</span> your first harvest box!
+                For the next <span className="font-bold text-charcoal">10 minutes</span>, get <span className="font-bold text-charcoal">Free Premium Gift Wrapping</span> (worth ₹49) and <span className="font-bold text-red-600">10% OFF</span> your first harvest box!
               </p>
               
               <div className="bg-white border-2 border-dashed border-mango rounded-xl p-5 mb-8 transform -rotate-1 hover:rotate-0 transition-transform">

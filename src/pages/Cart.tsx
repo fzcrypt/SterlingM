@@ -7,7 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 export default function Cart() {
-  const { items, removeFromCart, total, itemCount, clearCart, orderGiftWrap, setOrderGiftWrap, giftWrapTotal } = useCart();
+  const { items, removeFromCart, total, itemCount, clearCart, orderGiftWrap, setOrderGiftWrap, orderGiftNote, setOrderGiftNote, giftWrapTotal } = useCart();
   const navigate = useNavigate();
   const [checkoutStep, setCheckoutStep] = useState(1); // 1: Cart, 2: Shipping, 3: Confirmation
   const [address, setAddress] = useState({
@@ -55,7 +55,11 @@ export default function Cart() {
     });
 
     if (orderGiftWrap) {
-      message += `\n🎀 Entire Order Premium Gift Wrapped (+₹299)\n`;
+      message += `\n🎀 Entire Order Premium Gift Wrapped (+₹49)\n`;
+    }
+    
+    if (orderGiftNote.trim().length > 0) {
+      message += `📝 Personalized Note: "${orderGiftNote.trim()}"\n`;
     }
 
     message += `\n*Total Estimate:* ${formatCurrency(total)}\n`;
@@ -210,22 +214,33 @@ export default function Cart() {
                   </div>
 
                   {/* Entire Order Gift Wrap Toggle */}
-                  <div className="mb-10 bg-white/5 p-4 rounded-xl border border-white/10 flex items-start gap-4">
+                  <div className="mb-6 bg-white/5 p-4 rounded-xl border border-white/10 flex items-start gap-4">
                     <Gift size={24} className="text-mango shrink-0" />
-                    <div>
+                    <div className="flex-grow">
                       <label className="flex items-center gap-2 cursor-pointer mb-1">
                         <input 
                           type="checkbox" 
                           checked={orderGiftWrap}
                           onChange={(e) => setOrderGiftWrap(e.target.checked)}
-                          className="w-4 h-4 rounded border-white/20 text-mango focus:ring-mango bg-transparent"
+                          className="w-4 h-4 rounded border-white/20 text-mango focus:ring-mango"
                         />
                         <span className="text-sm font-bold text-parchment">Gift Wrap Entire Order</span>
                       </label>
                       <p className="text-xs text-parchment/60 leading-relaxed">
-                        We'll pack your entire harvest in a single, premium presentation box (+₹299).
+                        We'll pack your entire harvest in a single, premium presentation box (+₹49).
                       </p>
                     </div>
+                  </div>
+
+                  <div className="mb-10">
+                    <label className="block text-xs uppercase tracking-widest font-bold text-parchment/60 mb-2">Personalized Note</label>
+                    <textarea 
+                      placeholder="Add a special message for the delivery..."
+                      value={orderGiftNote}
+                      onChange={(e) => setOrderGiftNote(e.target.value)}
+                      rows={3}
+                      className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-parchment placeholder-parchment/30 focus:outline-none focus:border-mango transition-colors resize-none"
+                    />
                   </div>
 
                   <div className="flex justify-between items-baseline mb-12">
