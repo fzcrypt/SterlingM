@@ -5,7 +5,7 @@ import { formatCurrency, cn } from '../lib/utils';
 import { ShieldCheck, Plus } from 'lucide-react';
 
 export default function ProductCard({ variety }: { variety: MangoVariety }) {
-  const isAvailable = variety.seasonStatus === 'In Stock';
+  const isAvailable = variety.seasonStatus === 'In Stock' || variety.seasonStatus === 'Pre-Order';
   const [isDescExpanded, setIsDescExpanded] = useState(false);
 
   // We determine if we need a "See more" button based on length
@@ -65,7 +65,7 @@ export default function ProductCard({ variety }: { variety: MangoVariety }) {
             isAvailable ? "bg-leaf text-white border-leaf hover:bg-ink hover:border-ink" : "border-border-subtle text-ink/40"
           )}
         >
-          {isAvailable ? 'Secure My Box' : 'Coming Soon'}
+          {variety.seasonStatus === 'In Stock' ? 'Secure My Box' : variety.seasonStatus === 'Pre-Order' ? 'Pre-Book Now' : 'Coming Soon'}
         </Link>
       </div>
     </div>
