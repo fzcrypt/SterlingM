@@ -128,16 +128,23 @@ export default function ProductDetail() {
             <h1 className="text-5xl md:text-7xl font-serif mb-2">{variety.name}</h1>
             <p className="text-sm text-warm-gray italic mb-8 ml-1">{variety.scientificName}</p>
 
-            <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-center justify-between mb-8 animate-pulse">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600">
-                  <Sparkles size={20} />
+            <div className="mb-8">
+              <div className="flex justify-between items-end mb-2">
+                <div className="flex items-center gap-2">
+                  <Sparkles size={16} className="text-leaf animate-pulse" />
+                  <span className="font-bold text-charcoal text-sm">Selling Fast!</span>
                 </div>
-                <div>
-                  <p className="font-bold text-red-700 text-sm">High Demand</p>
-                  <p className="text-xs text-red-600/80 font-medium">Only 4 boxes left of this variety today!</p>
-                </div>
+                <span className="text-xs font-bold uppercase tracking-widest text-warm-gray">70% Claimed</span>
               </div>
+              <div className="h-3 w-full bg-parchment rounded-full overflow-hidden shadow-inner border border-charcoal/5">
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: '30%' }}
+                  transition={{ duration: 1.5, ease: "easeOut" }}
+                  className="h-full bg-leaf rounded-full"
+                />
+              </div>
+              <p className="text-[10px] text-warm-gray mt-2 italic flex justify-end">Hurry up! Limited daily quotas apply</p>
             </div>
 
             <div className="flex items-baseline gap-4 mb-10 pb-8 border-b border-charcoal/10">
@@ -243,7 +250,7 @@ export default function ProductDetail() {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <button 
                 onClick={handleAddToCart}
-                disabled={variety.seasonStatus !== 'In Stock' || (isGift && !giftRecipient.trim())}
+                disabled={!(variety.seasonStatus === 'In Stock' || variety.seasonStatus === 'Pre-Order') || (isGift && !giftRecipient.trim())}
                 className="flex-grow px-8 py-5 bg-leaf text-parchment font-bold rounded-2xl hover:bg-leaf-dark hover:scale-[1.02] transition-all disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed flex items-center justify-center gap-3"
               >
                 <Package size={20} />
